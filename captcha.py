@@ -1,69 +1,73 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[27]:
+# In[ ]:
 
 
 from selenium import webdriver
-driver = webdriver.Firefox()
-#driver.add_cookie({'name' : 'AcceptIRSCookiePolicyTime', 'value' : 'true'})
+# driver = webdriver.Firefox()
+# driver = webdriver.Chrome()
+driver = webdriver.PhantomJS()
 driver.get('http://irs.thsrc.com.tw/IMINT/')
 driver.find_element_by_id('btn-confirm').click()
 
 
-# In[28]:
+# In[ ]:
 
 
-driver.save_screenshot('thsrc.jpg')
+driver.save_screenshot("captcha/thsrc.jpg")
 
 
-# In[29]:
+# In[ ]:
 
 
-#element = driver.find_element_by_id('BookingS1Form_homeCaptcha_passCode')
 element = driver.find_element_by_xpath('//*[@id="BookingS1Form_homeCaptcha_passCode"]')
-print(element)
 location = element.location
 location
 
 
-# In[30]:
+# In[ ]:
 
 
 element.size
 
 
-# In[31]:
+# In[ ]:
 
 
 left = location['x']
-right = location['x'] + element.size['width']
+print("1 left: " + str(left))
+left = 400
+print("2 left: " + str(left))
+right = left + element.size['width']
 top = element.location['y']
-bottom = element.location['y']  + element.size['height']
+print("1 top: " + str(top))
+top = 550
+print("2 top: " + str(top))
+bottom = top + element.size['height']
 (left, top, right, bottom)
 
 
-# In[32]:
+# In[ ]:
 
 
 from PIL import Image
-img = Image.open('thsrc.jpg')
+img = Image.open('captcha/thsrc.jpg')
 img = img.crop((left, top, right, bottom))
 
 
-# In[33]:
+# In[ ]:
 
 
 img.show()
 
 
-# In[34]:
+# In[ ]:
 
 
 import time
 # convert rgba to rgb
 img = img.convert('RGB')
-
 img.save("captcha/" + str(time.time()) + '.jpg', "JPEG")
 
 
