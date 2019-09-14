@@ -4,5 +4,5 @@
 # 把 Jupyter Notebook 轉為 python script
 
 ```
-ipython nbconvert --to script captcha.ipynb
+jupyter nbconvert --to script captcha.ipynb
 ```
