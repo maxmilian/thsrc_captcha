@@ -164,6 +164,7 @@ Epoch 25/25
 Epoch 00025: saving model to model/25-1.10-3.01.hdf5
 ```
 
+訓練 log
 ![Train History](train_history.png)
 
 # 其他

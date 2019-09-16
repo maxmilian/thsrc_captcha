@@ -105,5 +105,5 @@ venv.bak/
 
 .DS_Store
 processed/*.jpg
-model/*
-logs/*
+model/*.hdf5
+logs/events*
