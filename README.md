@@ -184,5 +184,5 @@ Epoch 00025: saving model to model/25-1.10-3.01.hdf5
 jupyter nbconvert --to script crawler.ipynb
 
 # 影像預處理
-jupyter nbconvert --to script preprocess-batch.ipynb
+jupyter nbconvert --to script preprocessBatch.ipynb
 ```

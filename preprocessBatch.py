@@ -100,13 +100,13 @@ while True:
 
 print("start to process image from index: " + str(i))
 
-while True:
-    i += 1
-    filename = CAPTCHA_FOLDER + str(i) + '.jpg'
-    if not os.path.isfile(filename):
-        break
-    preprocessing(filename, PROCESSED_FOLDER + str(i) + '.jpg')
-    print("i: " + str(i))
+# while True:
+#     i += 1
+#     filename = CAPTCHA_FOLDER + str(i) + '.jpg'
+#     if not os.path.isfile(filename):
+#         break
+#     preprocessing(filename, PROCESSED_FOLDER + str(i) + '.jpg')
+#     print("i: " + str(i))
 
 print("completed")
 
