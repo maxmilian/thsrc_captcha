@@ -1,3 +1,4 @@
 Pillow >= 6.1.0
 selenium >= 3.141.0
+keras >= 2.2.5
 h5py >= 1.10.0

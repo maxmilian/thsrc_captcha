@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[ ]:
 
 
 import time, os
@@ -15,7 +15,7 @@ HEIGHT = 48
 FOLDER = "captcha/"
 
 
-# In[6]:
+# In[ ]:
 
 
 def get_screenshot():
@@ -38,7 +38,7 @@ def get_screenshot():
     return location, size, device_pixel_ratio
 
 
-# In[7]:
+# In[ ]:
 
 
 def refine_coordinate(location, size, ratio):
@@ -50,7 +50,7 @@ def refine_coordinate(location, size, ratio):
     return (left, top, right, bottom)
 
 
-# In[8]:
+# In[ ]:
 
 
 def crop_image(coordinate):
@@ -72,7 +72,9 @@ while True:
         i -= 1
         break
 
-while i < 10000:
+print("start to crawler from index: " + str(i))
+
+while i < 5000:
     i += 1
     location, size, ratio = get_screenshot()
     coordinate = refine_coordinate(location, size, ratio)

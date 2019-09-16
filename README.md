@@ -14,6 +14,14 @@
 
 [[爬蟲實戰] 如何破解高鐵驗證碼 (2) - 使用迴歸方法去除多餘弧線?](https://www.youtube.com/watch?v=4DHcOPSfC4c)
 
+### Dependencies
+
+請先安裝相關的 python 套件
+
+```sh
+pip3 install -r requirements.txt
+```
+
 ### 步驟
 
 大致上分為四個步驟，以下會分步驟說明
@@ -175,6 +183,6 @@ Epoch 00025: saving model to model/25-1.10-3.01.hdf5
 # 爬蟲
 jupyter nbconvert --to script crawler.ipynb
 
-# 影像處理
-jupyter nbconvert --to script solver-batch.ipynb
+# 影像預處理
+jupyter nbconvert --to script preprocess-batch.ipynb
 ```

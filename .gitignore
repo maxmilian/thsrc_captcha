@@ -107,3 +107,6 @@ venv.bak/
 processed/*.jpg
 model/*.hdf5
 logs/events*
+thsrc.jpg
+captcha.jpg
+preprocessing.jpg
