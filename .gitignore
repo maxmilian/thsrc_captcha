@@ -104,5 +104,6 @@ venv.bak/
 .mypy_cache/
 
 .DS_Store
-captcha/*.jpg
 processed/*.jpg
+model/*
+logs/*
