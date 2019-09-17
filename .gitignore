@@ -108,6 +108,6 @@ processed/*.jpg
 failed/*.jpg
 model/*.hdf5
 logs/events*
-thsrc.jpg
+thsrc.png
 captcha.jpg
 preprocessing.jpg

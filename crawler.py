@@ -9,7 +9,7 @@ from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-full_image = "thsrc.jpg"
+FULL_IMG = "thsrc.png"
 WIDTH = 140
 HEIGHT = 48
 FOLDER = "captcha/"
@@ -18,7 +18,7 @@ FOLDER = "captcha/"
 # In[ ]:
 
 
-def get_screenshot():
+def get_screenshot(filename):
     chrome_options = Options() # 啟動無頭模式
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-gpu')
@@ -29,7 +29,7 @@ def get_screenshot():
     driver.find_element_by_id('btn-confirm').click()
     time.sleep(1)
 
-    driver.save_screenshot(full_image)
+    driver.save_screenshot(filename)
     element = driver.find_element_by_xpath('//*[@id="BookingS1Form_homeCaptcha_passCode"]')
     location = element.location
     size = element.size
@@ -53,8 +53,8 @@ def refine_coordinate(location, size, ratio):
 # In[ ]:
 
 
-def crop_image(coordinate):
-    img = Image.open(full_image)
+def crop_image(filename, coordinate):
+    img = Image.open(filename)
     img = img.crop(coordinate)
     return img
 
@@ -76,9 +76,9 @@ print("start to crawler from index: " + str(i))
 
 while i < 5000:
     i += 1
-    location, size, ratio = get_screenshot()
+    location, size, ratio = get_screenshot(FULL_IMG)
     coordinate = refine_coordinate(location, size, ratio)
-    img = crop_image(coordinate)
+    img = crop_image(FULL_IMG, coordinate)
     img = img.resize((WIDTH, HEIGHT), Image.ANTIALIAS)
     # convert rgba to rgb
     img = img.convert('RGB')
