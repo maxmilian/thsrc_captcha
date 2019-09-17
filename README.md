@@ -70,106 +70,128 @@ CNN部分就直接使用參考資料1，這部分優化比較少
 這邊就標記檔，存成為 csv，每一個圖片一行，之後要丟入 CNN 當作 label 的訓練資料。
 
 ```sh
-Epoch 1/25
-2800/2800 [==============================] - 107s 38ms/step - loss: 16.7109 - digit1_loss: 4.1092 - digit2_loss: 4.2088 - digit3_loss: 4.2350 - digit4_loss: 4.1579 - digit1_acc: 0.0607 - digit2_acc: 0.0475 - digit3_acc: 0.0486 - digit4_acc: 0.0521 - val_loss: 12.4275 - val_digit1_loss: 3.0967 - val_digit2_loss: 3.1404 - val_digit3_loss: 3.1458 - val_digit4_loss: 3.0446 - val_digit1_acc: 0.0557 - val_digit2_acc: 0.0571 - val_digit3_acc: 0.0514 - val_digit4_acc: 0.0486
+Train on 4000 samples, validate on 1000 samples
 
-Epoch 00001: saving model to model/01-16.71-12.43.hdf5
-Epoch 2/25
-2800/2800 [==============================] - 113s 41ms/step - loss: 14.5190 - digit1_loss: 3.6065 - digit2_loss: 3.6516 - digit3_loss: 3.6368 - digit4_loss: 3.6241 - digit1_acc: 0.0507 - digit2_acc: 0.0486 - digit3_acc: 0.0532 - digit4_acc: 0.0604 - val_loss: 12.3756 - val_digit1_loss: 3.0903 - val_digit2_loss: 3.2185 - val_digit3_loss: 3.0509 - val_digit4_loss: 3.0159 - val_digit1_acc: 0.0786 - val_digit2_acc: 0.0486 - val_digit3_acc: 0.0786 - val_digit4_acc: 0.0700
+Epoch 1/30
+4000/4000 [==============================] - 126s 32ms/step - loss: 16.0540 - digit1_loss: 4.0371 - digit2_loss: 3.9618 - digit3_loss: 4.0593 - digit4_loss: 3.9958 - digit1_acc: 0.0552 - digit2_acc: 0.0515 - digit3_acc: 0.0530 - digit4_acc: 0.0575 - val_loss: 12.2010 - val_digit1_loss: 2.9647 - val_digit2_loss: 3.0668 - val_digit3_loss: 3.0576 - val_digit4_loss: 3.1119 - val_digit1_acc: 0.0330 - val_digit2_acc: 0.0540 - val_digit3_acc: 0.0590 - val_digit4_acc: 0.0510
 
-Epoch 00002: saving model to model/02-14.52-12.38.hdf5
-Epoch 3/25
-2800/2800 [==============================] - 117s 42ms/step - loss: 13.6138 - digit1_loss: 3.3852 - digit2_loss: 3.4383 - digit3_loss: 3.3928 - digit4_loss: 3.3976 - digit1_acc: 0.0550 - digit2_acc: 0.0621 - digit3_acc: 0.0525 - digit4_acc: 0.0529 - val_loss: 11.9425 - val_digit1_loss: 2.9975 - val_digit2_loss: 2.9526 - val_digit3_loss: 2.9945 - val_digit4_loss: 2.9979 - val_digit1_acc: 0.0357 - val_digit2_acc: 0.0557 - val_digit3_acc: 0.0600 - val_digit4_acc: 0.0643
+Epoch 00001: saving model to model/01-16.05-12.20.hdf5
+Epoch 2/30
+4000/4000 [==============================] - 121s 30ms/step - loss: 13.6571 - digit1_loss: 3.3964 - digit2_loss: 3.4085 - digit3_loss: 3.3932 - digit4_loss: 3.4590 - digit1_acc: 0.0580 - digit2_acc: 0.0575 - digit3_acc: 0.0557 - digit4_acc: 0.0517 - val_loss: 11.9186 - val_digit1_loss: 2.9670 - val_digit2_loss: 2.9621 - val_digit3_loss: 2.9997 - val_digit4_loss: 2.9898 - val_digit1_acc: 0.0640 - val_digit2_acc: 0.0610 - val_digit3_acc: 0.1030 - val_digit4_acc: 0.0520
 
-Epoch 00003: saving model to model/03-13.61-11.94.hdf5
-Epoch 4/25
-2800/2800 [==============================] - 126s 45ms/step - loss: 12.6738 - digit1_loss: 3.1548 - digit2_loss: 3.1757 - digit3_loss: 3.1629 - digit4_loss: 3.1804 - digit1_acc: 0.0564 - digit2_acc: 0.0564 - digit3_acc: 0.0575 - digit4_acc: 0.0596 - val_loss: 11.8259 - val_digit1_loss: 2.9244 - val_digit2_loss: 2.9488 - val_digit3_loss: 2.9663 - val_digit4_loss: 2.9864 - val_digit1_acc: 0.0714 - val_digit2_acc: 0.0600 - val_digit3_acc: 0.0557 - val_digit4_acc: 0.0471
+Epoch 00002: saving model to model/02-13.66-11.92.hdf5
+Epoch 3/30
+4000/4000 [==============================] - 122s 31ms/step - loss: 12.2014 - digit1_loss: 3.0349 - digit2_loss: 3.0423 - digit3_loss: 3.0436 - digit4_loss: 3.0806 - digit1_acc: 0.0605 - digit2_acc: 0.0570 - digit3_acc: 0.0612 - digit4_acc: 0.0590 - val_loss: 11.8083 - val_digit1_loss: 2.9481 - val_digit2_loss: 2.9509 - val_digit3_loss: 2.9422 - val_digit4_loss: 2.9670 - val_digit1_acc: 0.0760 - val_digit2_acc: 0.0480 - val_digit3_acc: 0.0600 - val_digit4_acc: 0.0590
 
-Epoch 00004: saving model to model/04-12.67-11.83.hdf5
-Epoch 5/25
-2800/2800 [==============================] - 114s 41ms/step - loss: 12.0446 - digit1_loss: 2.9947 - digit2_loss: 3.0180 - digit3_loss: 3.0090 - digit4_loss: 3.0229 - digit1_acc: 0.0700 - digit2_acc: 0.0654 - digit3_acc: 0.0636 - digit4_acc: 0.0550 - val_loss: 11.7630 - val_digit1_loss: 2.9258 - val_digit2_loss: 2.9331 - val_digit3_loss: 2.9353 - val_digit4_loss: 2.9688 - val_digit1_acc: 0.0771 - val_digit2_acc: 0.0500 - val_digit3_acc: 0.0886 - val_digit4_acc: 0.0471
+Epoch 00003: saving model to model/03-12.20-11.81.hdf5
+Epoch 4/30
+4000/4000 [==============================] - 121s 30ms/step - loss: 11.8352 - digit1_loss: 2.9504 - digit2_loss: 2.9566 - digit3_loss: 2.9638 - digit4_loss: 2.9644 - digit1_acc: 0.0552 - digit2_acc: 0.0532 - digit3_acc: 0.0490 - digit4_acc: 0.0562 - val_loss: 11.7646 - val_digit1_loss: 2.9332 - val_digit2_loss: 2.9459 - val_digit3_loss: 2.9347 - val_digit4_loss: 2.9507 - val_digit1_acc: 0.0890 - val_digit2_acc: 0.0750 - val_digit3_acc: 0.0720 - val_digit4_acc: 0.0530
 
-Epoch 00005: saving model to model/05-12.04-11.76.hdf5
-Epoch 6/25
-2800/2800 [==============================] - 114s 41ms/step - loss: 11.8001 - digit1_loss: 2.9342 - digit2_loss: 2.9435 - digit3_loss: 2.9479 - digit4_loss: 2.9745 - digit1_acc: 0.0696 - digit2_acc: 0.0711 - digit3_acc: 0.0661 - digit4_acc: 0.0564 - val_loss: 11.7209 - val_digit1_loss: 2.9485 - val_digit2_loss: 2.9142 - val_digit3_loss: 2.9089 - val_digit4_loss: 2.9493 - val_digit1_acc: 0.0571 - val_digit2_acc: 0.0657 - val_digit3_acc: 0.0714 - val_digit4_acc: 0.0400
+Epoch 00004: saving model to model/04-11.84-11.76.hdf5
+Epoch 5/30
+4000/4000 [==============================] - 121s 30ms/step - loss: 11.7993 - digit1_loss: 2.9391 - digit2_loss: 2.9512 - digit3_loss: 2.9531 - digit4_loss: 2.9558 - digit1_acc: 0.0640 - digit2_acc: 0.0587 - digit3_acc: 0.0545 - digit4_acc: 0.0552 - val_loss: 11.7560 - val_digit1_loss: 2.9320 - val_digit2_loss: 2.9450 - val_digit3_loss: 2.9331 - val_digit4_loss: 2.9458 - val_digit1_acc: 0.0560 - val_digit2_acc: 0.0650 - val_digit3_acc: 0.0700 - val_digit4_acc: 0.0460
 
-Epoch 00006: saving model to model/06-11.80-11.72.hdf5
-Epoch 7/25
-2800/2800 [==============================] - 122s 44ms/step - loss: 11.5313 - digit1_loss: 2.8680 - digit2_loss: 2.8566 - digit3_loss: 2.8635 - digit4_loss: 2.9431 - digit1_acc: 0.0889 - digit2_acc: 0.1121 - digit3_acc: 0.0950 - digit4_acc: 0.0675 - val_loss: 11.9389 - val_digit1_loss: 3.0044 - val_digit2_loss: 3.0128 - val_digit3_loss: 2.9520 - val_digit4_loss: 2.9698 - val_digit1_acc: 0.0543 - val_digit2_acc: 0.0600 - val_digit3_acc: 0.0643 - val_digit4_acc: 0.0586
+Epoch 00005: saving model to model/05-11.80-11.76.hdf5
+Epoch 6/30
+4000/4000 [==============================] - 122s 31ms/step - loss: 11.7456 - digit1_loss: 2.9215 - digit2_loss: 2.9310 - digit3_loss: 2.9360 - digit4_loss: 2.9572 - digit1_acc: 0.0602 - digit2_acc: 0.0717 - digit3_acc: 0.0657 - digit4_acc: 0.0510 - val_loss: 11.7722 - val_digit1_loss: 2.9454 - val_digit2_loss: 2.9480 - val_digit3_loss: 2.9374 - val_digit4_loss: 2.9413 - val_digit1_acc: 0.0610 - val_digit2_acc: 0.0590 - val_digit3_acc: 0.0690 - val_digit4_acc: 0.0590
 
-Epoch 00007: saving model to model/07-11.53-11.94.hdf5
-Epoch 8/25
-2800/2800 [==============================] - 114s 41ms/step - loss: 11.2049 - digit1_loss: 2.7748 - digit2_loss: 2.7416 - digit3_loss: 2.7609 - digit4_loss: 2.9276 - digit1_acc: 0.1093 - digit2_acc: 0.1289 - digit3_acc: 0.1164 - digit4_acc: 0.0775 - val_loss: 11.6754 - val_digit1_loss: 2.9225 - val_digit2_loss: 2.9469 - val_digit3_loss: 2.8627 - val_digit4_loss: 2.9433 - val_digit1_acc: 0.0643 - val_digit2_acc: 0.0557 - val_digit3_acc: 0.0843 - val_digit4_acc: 0.0543
+Epoch 00006: saving model to model/06-11.75-11.77.hdf5
+Epoch 7/30
+4000/4000 [==============================] - 121s 30ms/step - loss: 11.4043 - digit1_loss: 2.8127 - digit2_loss: 2.8095 - digit3_loss: 2.8426 - digit4_loss: 2.9395 - digit1_acc: 0.1035 - digit2_acc: 0.1175 - digit3_acc: 0.0927 - digit4_acc: 0.0610 - val_loss: 11.4247 - val_digit1_loss: 2.8225 - val_digit2_loss: 2.8337 - val_digit3_loss: 2.8499 - val_digit4_loss: 2.9186 - val_digit1_acc: 0.1530 - val_digit2_acc: 0.1300 - val_digit3_acc: 0.1210 - val_digit4_acc: 0.0850
 
-Epoch 00008: saving model to model/08-11.20-11.68.hdf5
-Epoch 9/25
-2800/2800 [==============================] - 116s 41ms/step - loss: 10.9384 - digit1_loss: 2.6893 - digit2_loss: 2.6692 - digit3_loss: 2.6887 - digit4_loss: 2.8913 - digit1_acc: 0.1389 - digit2_acc: 0.1343 - digit3_acc: 0.1196 - digit4_acc: 0.0904 - val_loss: 12.1687 - val_digit1_loss: 3.0687 - val_digit2_loss: 3.1123 - val_digit3_loss: 3.0031 - val_digit4_loss: 2.9846 - val_digit1_acc: 0.0486 - val_digit2_acc: 0.0500 - val_digit3_acc: 0.0657 - val_digit4_acc: 0.0443
+Epoch 00007: saving model to model/07-11.40-11.42.hdf5
+Epoch 8/30
+4000/4000 [==============================] - 118s 30ms/step - loss: 11.1589 - digit1_loss: 2.7326 - digit2_loss: 2.7388 - digit3_loss: 2.7704 - digit4_loss: 2.9171 - digit1_acc: 0.1293 - digit2_acc: 0.1262 - digit3_acc: 0.1120 - digit4_acc: 0.0807 - val_loss: 11.8702 - val_digit1_loss: 3.0091 - val_digit2_loss: 3.0127 - val_digit3_loss: 2.9173 - val_digit4_loss: 2.9311 - val_digit1_acc: 0.0600 - val_digit2_acc: 0.0610 - val_digit3_acc: 0.0690 - val_digit4_acc: 0.0750
 
-Epoch 00009: saving model to model/09-10.94-12.17.hdf5
-Epoch 10/25
-2800/2800 [==============================] - 118s 42ms/step - loss: 10.6856 - digit1_loss: 2.6041 - digit2_loss: 2.6047 - digit3_loss: 2.6309 - digit4_loss: 2.8460 - digit1_acc: 0.1521 - digit2_acc: 0.1571 - digit3_acc: 0.1479 - digit4_acc: 0.1054 - val_loss: 10.7800 - val_digit1_loss: 2.6362 - val_digit2_loss: 2.6428 - val_digit3_loss: 2.6621 - val_digit4_loss: 2.8390 - val_digit1_acc: 0.1586 - val_digit2_acc: 0.1600 - val_digit3_acc: 0.1529 - val_digit4_acc: 0.0943
+Epoch 00008: saving model to model/08-11.16-11.87.hdf5
+Epoch 9/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 10.3355 - digit1_loss: 2.4393 - digit2_loss: 2.5085 - digit3_loss: 2.5554 - digit4_loss: 2.8323 - digit1_acc: 0.2117 - digit2_acc: 0.1700 - digit3_acc: 0.1627 - digit4_acc: 0.1035 - val_loss: 11.5317 - val_digit1_loss: 2.9173 - val_digit2_loss: 2.8979 - val_digit3_loss: 2.8238 - val_digit4_loss: 2.8928 - val_digit1_acc: 0.1090 - val_digit2_acc: 0.0710 - val_digit3_acc: 0.0810 - val_digit4_acc: 0.0840
 
-Epoch 00010: saving model to model/10-10.69-10.78.hdf5
-Epoch 11/25
-2800/2800 [==============================] - 113s 40ms/step - loss: 10.3469 - digit1_loss: 2.4689 - digit2_loss: 2.5265 - digit3_loss: 2.5468 - digit4_loss: 2.8048 - digit1_acc: 0.1786 - digit2_acc: 0.1771 - digit3_acc: 0.1639 - digit4_acc: 0.1193 - val_loss: 11.4256 - val_digit1_loss: 2.8287 - val_digit2_loss: 2.8618 - val_digit3_loss: 2.8268 - val_digit4_loss: 2.9083 - val_digit1_acc: 0.0900 - val_digit2_acc: 0.0829 - val_digit3_acc: 0.1014 - val_digit4_acc: 0.0671
+Epoch 00009: saving model to model/09-10.34-11.53.hdf5
+Epoch 10/30
+4000/4000 [==============================] - 113s 28ms/step - loss: 9.5355 - digit1_loss: 2.0846 - digit2_loss: 2.3134 - digit3_loss: 2.3553 - digit4_loss: 2.7823 - digit1_acc: 0.3115 - digit2_acc: 0.2440 - digit3_acc: 0.2330 - digit4_acc: 0.1227 - val_loss: 10.8557 - val_digit1_loss: 2.6697 - val_digit2_loss: 2.6968 - val_digit3_loss: 2.6556 - val_digit4_loss: 2.8335 - val_digit1_acc: 0.1600 - val_digit2_acc: 0.1640 - val_digit3_acc: 0.1800 - val_digit4_acc: 0.1300
 
-Epoch 00011: saving model to model/11-10.35-11.43.hdf5
-Epoch 12/25
-2800/2800 [==============================] - 112s 40ms/step - loss: 9.9863 - digit1_loss: 2.3238 - digit2_loss: 2.4155 - digit3_loss: 2.4884 - digit4_loss: 2.7586 - digit1_acc: 0.2300 - digit2_acc: 0.2171 - digit3_acc: 0.1832 - digit4_acc: 0.1311 - val_loss: 11.7676 - val_digit1_loss: 3.0018 - val_digit2_loss: 2.9324 - val_digit3_loss: 2.9067 - val_digit4_loss: 2.9267 - val_digit1_acc: 0.0700 - val_digit2_acc: 0.0957 - val_digit3_acc: 0.0786 - val_digit4_acc: 0.0514
+Epoch 00010: saving model to model/10-9.54-10.86.hdf5
+Epoch 11/30
+4000/4000 [==============================] - 113s 28ms/step - loss: 8.7521 - digit1_loss: 1.7619 - digit2_loss: 2.1221 - digit3_loss: 2.1831 - digit4_loss: 2.6849 - digit1_acc: 0.4043 - digit2_acc: 0.2925 - digit3_acc: 0.2700 - digit4_acc: 0.1475 - val_loss: 10.2410 - val_digit1_loss: 2.3964 - val_digit2_loss: 2.5543 - val_digit3_loss: 2.5206 - val_digit4_loss: 2.7696 - val_digit1_acc: 0.2620 - val_digit2_acc: 0.2230 - val_digit3_acc: 0.2260 - val_digit4_acc: 0.1710
 
-Epoch 00012: saving model to model/12-9.99-11.77.hdf5
-Epoch 13/25
-2800/2800 [==============================] - 115s 41ms/step - loss: 9.4391 - digit1_loss: 2.1069 - digit2_loss: 2.2806 - digit3_loss: 2.3539 - digit4_loss: 2.6976 - digit1_acc: 0.2946 - digit2_acc: 0.2518 - digit3_acc: 0.2279 - digit4_acc: 0.1379 - val_loss: 11.6869 - val_digit1_loss: 3.0191 - val_digit2_loss: 2.8962 - val_digit3_loss: 2.8858 - val_digit4_loss: 2.8859 - val_digit1_acc: 0.1143 - val_digit2_acc: 0.1000 - val_digit3_acc: 0.0943 - val_digit4_acc: 0.0571
+Epoch 00011: saving model to model/11-8.75-10.24.hdf5
+Epoch 12/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 7.7067 - digit1_loss: 1.3698 - digit2_loss: 1.8615 - digit3_loss: 1.9268 - digit4_loss: 2.5485 - digit1_acc: 0.5265 - digit2_acc: 0.3683 - digit3_acc: 0.3503 - digit4_acc: 0.1867 - val_loss: 9.7986 - val_digit1_loss: 2.2391 - val_digit2_loss: 2.4483 - val_digit3_loss: 2.4261 - val_digit4_loss: 2.6851 - val_digit1_acc: 0.2580 - val_digit2_acc: 0.2430 - val_digit3_acc: 0.2580 - val_digit4_acc: 0.1680
 
-Epoch 00013: saving model to model/13-9.44-11.69.hdf5
-Epoch 14/25
-2800/2800 [==============================] - 115s 41ms/step - loss: 8.5993 - digit1_loss: 1.7538 - digit2_loss: 2.1041 - digit3_loss: 2.1820 - digit4_loss: 2.5594 - digit1_acc: 0.4204 - digit2_acc: 0.3036 - digit3_acc: 0.2729 - digit4_acc: 0.1875 - val_loss: 12.5353 - val_digit1_loss: 3.2598 - val_digit2_loss: 3.1634 - val_digit3_loss: 3.0922 - val_digit4_loss: 3.0199 - val_digit1_acc: 0.1457 - val_digit2_acc: 0.0786 - val_digit3_acc: 0.0671 - val_digit4_acc: 0.0471
+Epoch 00012: saving model to model/12-7.71-9.80.hdf5
+Epoch 13/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 6.6032 - digit1_loss: 1.0812 - digit2_loss: 1.6077 - digit3_loss: 1.6616 - digit4_loss: 2.2526 - digit1_acc: 0.6160 - digit2_acc: 0.4503 - digit3_acc: 0.4362 - digit4_acc: 0.2765 - val_loss: 8.7999 - val_digit1_loss: 1.8599 - val_digit2_loss: 2.2249 - val_digit3_loss: 2.2121 - val_digit4_loss: 2.5030 - val_digit1_acc: 0.4410 - val_digit2_acc: 0.2740 - val_digit3_acc: 0.3120 - val_digit4_acc: 0.2710
 
-Epoch 00014: saving model to model/14-8.60-12.54.hdf5
-Epoch 15/25
-2800/2800 [==============================] - 118s 42ms/step - loss: 7.6108 - digit1_loss: 1.3987 - digit2_loss: 1.8638 - digit3_loss: 1.9497 - digit4_loss: 2.3986 - digit1_acc: 0.5389 - digit2_acc: 0.3832 - digit3_acc: 0.3379 - digit4_acc: 0.2282 - val_loss: 12.9372 - val_digit1_loss: 3.4778 - val_digit2_loss: 3.2452 - val_digit3_loss: 3.1268 - val_digit4_loss: 3.0873 - val_digit1_acc: 0.0986 - val_digit2_acc: 0.0714 - val_digit3_acc: 0.1029 - val_digit4_acc: 0.0414
+Epoch 00013: saving model to model/13-6.60-8.80.hdf5
+Epoch 14/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 5.4419 - digit1_loss: 0.8701 - digit2_loss: 1.3448 - digit3_loss: 1.3916 - digit4_loss: 1.8355 - digit1_acc: 0.7070 - digit2_acc: 0.5397 - digit3_acc: 0.5300 - digit4_acc: 0.3962 - val_loss: 8.7488 - val_digit1_loss: 2.0633 - val_digit2_loss: 2.1930 - val_digit3_loss: 2.1801 - val_digit4_loss: 2.3125 - val_digit1_acc: 0.3980 - val_digit2_acc: 0.3090 - val_digit3_acc: 0.3180 - val_digit4_acc: 0.2770
 
-Epoch 00015: saving model to model/15-7.61-12.94.hdf5
-Epoch 16/25
-2800/2800 [==============================] - 117s 42ms/step - loss: 6.6703 - digit1_loss: 1.1078 - digit2_loss: 1.6401 - digit3_loss: 1.7238 - digit4_loss: 2.1987 - digit1_acc: 0.6271 - digit2_acc: 0.4439 - digit3_acc: 0.4207 - digit4_acc: 0.2736 - val_loss: 12.5268 - val_digit1_loss: 3.3439 - val_digit2_loss: 3.1551 - val_digit3_loss: 2.9895 - val_digit4_loss: 3.0383 - val_digit1_acc: 0.1086 - val_digit2_acc: 0.0686 - val_digit3_acc: 0.1357 - val_digit4_acc: 0.0486
+Epoch 00014: saving model to model/14-5.44-8.75.hdf5
+Epoch 15/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 4.2047 - digit1_loss: 0.6879 - digit2_loss: 1.0596 - digit3_loss: 1.0408 - digit4_loss: 1.4164 - digit1_acc: 0.7690 - digit2_acc: 0.6370 - digit3_acc: 0.6415 - digit4_acc: 0.5135 - val_loss: 7.1819 - val_digit1_loss: 1.6352 - val_digit2_loss: 1.8690 - val_digit3_loss: 1.8067 - val_digit4_loss: 1.8710 - val_digit1_acc: 0.5080 - val_digit2_acc: 0.4470 - val_digit3_acc: 0.4680 - val_digit4_acc: 0.5110
 
-Epoch 00016: saving model to model/16-6.67-12.53.hdf5
-Epoch 17/25
-2800/2800 [==============================] - 110s 39ms/step - loss: 5.6967 - digit1_loss: 0.8847 - digit2_loss: 1.4174 - digit3_loss: 1.4806 - digit4_loss: 1.9139 - digit1_acc: 0.7157 - digit2_acc: 0.5321 - digit3_acc: 0.5039 - digit4_acc: 0.3654 - val_loss: 10.5086 - val_digit1_loss: 2.5586 - val_digit2_loss: 2.6790 - val_digit3_loss: 2.5378 - val_digit4_loss: 2.7332 - val_digit1_acc: 0.2629 - val_digit2_acc: 0.1486 - val_digit3_acc: 0.2371 - val_digit4_acc: 0.0986
+Epoch 00015: saving model to model/15-4.20-7.18.hdf5
+Epoch 16/30
+4000/4000 [==============================] - 115s 29ms/step - loss: 3.1712 - digit1_loss: 0.5458 - digit2_loss: 0.7972 - digit3_loss: 0.7973 - digit4_loss: 1.0309 - digit1_acc: 0.8240 - digit2_acc: 0.7323 - digit3_acc: 0.7272 - digit4_acc: 0.6578 - val_loss: 5.3002 - val_digit1_loss: 1.2007 - val_digit2_loss: 1.3546 - val_digit3_loss: 1.3279 - val_digit4_loss: 1.4170 - val_digit1_acc: 0.6370 - val_digit2_acc: 0.6050 - val_digit3_acc: 0.6000 - val_digit4_acc: 0.6730
 
-Epoch 00017: saving model to model/17-5.70-10.51.hdf5
-Epoch 18/25
-2800/2800 [==============================] - 111s 39ms/step - loss: 4.7040 - digit1_loss: 0.7355 - digit2_loss: 1.1316 - digit3_loss: 1.2210 - digit4_loss: 1.6158 - digit1_acc: 0.7575 - digit2_acc: 0.6243 - digit3_acc: 0.5871 - digit4_acc: 0.4607 - val_loss: 10.6911 - val_digit1_loss: 2.6859 - val_digit2_loss: 2.6922 - val_digit3_loss: 2.5996 - val_digit4_loss: 2.7133 - val_digit1_acc: 0.2843 - val_digit2_acc: 0.2000 - val_digit3_acc: 0.2071 - val_digit4_acc: 0.1071
+Epoch 00016: saving model to model/16-3.17-5.30.hdf5
+Epoch 17/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 2.4053 - digit1_loss: 0.4284 - digit2_loss: 0.6214 - digit3_loss: 0.6057 - digit4_loss: 0.7498 - digit1_acc: 0.8675 - digit2_acc: 0.7997 - digit3_acc: 0.8102 - digit4_acc: 0.7528 - val_loss: 5.8780 - val_digit1_loss: 1.5331 - val_digit2_loss: 1.6148 - val_digit3_loss: 1.4048 - val_digit4_loss: 1.3253 - val_digit1_acc: 0.5270 - val_digit2_acc: 0.4860 - val_digit3_acc: 0.5620 - val_digit4_acc: 0.6130
 
-Epoch 00018: saving model to model/18-4.70-10.69.hdf5
-Epoch 19/25
-2800/2800 [==============================] - 106s 38ms/step - loss: 3.7462 - digit1_loss: 0.5916 - digit2_loss: 0.9323 - digit3_loss: 0.9444 - digit4_loss: 1.2779 - digit1_acc: 0.8107 - digit2_acc: 0.6939 - digit3_acc: 0.6839 - digit4_acc: 0.5711 - val_loss: 8.9718 - val_digit1_loss: 2.2519 - val_digit2_loss: 2.2428 - val_digit3_loss: 2.1542 - val_digit4_loss: 2.3230 - val_digit1_acc: 0.3471 - val_digit2_acc: 0.3229 - val_digit3_acc: 0.3100 - val_digit4_acc: 0.2229
+Epoch 00017: saving model to model/17-2.41-5.88.hdf5
+Epoch 18/30
+4000/4000 [==============================] - 113s 28ms/step - loss: 1.8415 - digit1_loss: 0.3371 - digit2_loss: 0.4753 - digit3_loss: 0.4630 - digit4_loss: 0.5661 - digit1_acc: 0.8962 - digit2_acc: 0.8530 - digit3_acc: 0.8472 - digit4_acc: 0.8202 - val_loss: 2.2810 - val_digit1_loss: 0.5258 - val_digit2_loss: 0.6435 - val_digit3_loss: 0.5563 - val_digit4_loss: 0.5554 - val_digit1_acc: 0.8430 - val_digit2_acc: 0.8150 - val_digit3_acc: 0.8410 - val_digit4_acc: 0.8770
 
-Epoch 00019: saving model to model/19-3.75-8.97.hdf5
-Epoch 20/25
-2800/2800 [==============================] - 125s 45ms/step - loss: 2.9778 - digit1_loss: 0.4743 - digit2_loss: 0.7441 - digit3_loss: 0.7569 - digit4_loss: 1.0025 - digit1_acc: 0.8489 - digit2_acc: 0.7607 - digit3_acc: 0.7493 - digit4_acc: 0.6721 - val_loss: 7.8944 - val_digit1_loss: 2.0506 - val_digit2_loss: 2.0107 - val_digit3_loss: 1.8425 - val_digit4_loss: 1.9905 - val_digit1_acc: 0.3871 - val_digit2_acc: 0.3614 - val_digit3_acc: 0.4257 - val_digit4_acc: 0.3843
+Epoch 00018: saving model to model/18-1.84-2.28.hdf5
+Epoch 19/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 1.3941 - digit1_loss: 0.2920 - digit2_loss: 0.3748 - digit3_loss: 0.3493 - digit4_loss: 0.3781 - digit1_acc: 0.9165 - digit2_acc: 0.8820 - digit3_acc: 0.8937 - digit4_acc: 0.8880 - val_loss: 2.5405 - val_digit1_loss: 0.6710 - val_digit2_loss: 0.7068 - val_digit3_loss: 0.6372 - val_digit4_loss: 0.5254 - val_digit1_acc: 0.7660 - val_digit2_acc: 0.7680 - val_digit3_acc: 0.7900 - val_digit4_acc: 0.8520
 
-Epoch 00020: saving model to model/20-2.98-7.89.hdf5
-Epoch 21/25
-2800/2800 [==============================] - 119s 43ms/step - loss: 2.3917 - digit1_loss: 0.4053 - digit2_loss: 0.6169 - digit3_loss: 0.5835 - digit4_loss: 0.7859 - digit1_acc: 0.8693 - digit2_acc: 0.7971 - digit3_acc: 0.8182 - digit4_acc: 0.7457 - val_loss: 5.1216 - val_digit1_loss: 1.1568 - val_digit2_loss: 1.2736 - val_digit3_loss: 1.2433 - val_digit4_loss: 1.4478 - val_digit1_acc: 0.6386 - val_digit2_acc: 0.6414 - val_digit3_acc: 0.6400 - val_digit4_acc: 0.5871
+Epoch 00019: saving model to model/19-1.39-2.54.hdf5
+Epoch 20/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 1.1144 - digit1_loss: 0.2260 - digit2_loss: 0.3042 - digit3_loss: 0.2801 - digit4_loss: 0.3041 - digit1_acc: 0.9415 - digit2_acc: 0.9115 - digit3_acc: 0.9120 - digit4_acc: 0.9115 - val_loss: 1.7021 - val_digit1_loss: 0.4025 - val_digit2_loss: 0.5123 - val_digit3_loss: 0.3821 - val_digit4_loss: 0.4053 - val_digit1_acc: 0.8710 - val_digit2_acc: 0.8450 - val_digit3_acc: 0.8810 - val_digit4_acc: 0.8760
 
-Epoch 00021: saving model to model/21-2.39-5.12.hdf5
-Epoch 22/25
-2800/2800 [==============================] - 131s 47ms/step - loss: 1.9086 - digit1_loss: 0.3457 - digit2_loss: 0.4933 - digit3_loss: 0.4754 - digit4_loss: 0.5942 - digit1_acc: 0.8896 - digit2_acc: 0.8446 - digit3_acc: 0.8471 - digit4_acc: 0.8057 - val_loss: 4.8950 - val_digit1_loss: 1.1882 - val_digit2_loss: 1.3113 - val_digit3_loss: 1.1736 - val_digit4_loss: 1.2219 - val_digit1_acc: 0.6129 - val_digit2_acc: 0.6086 - val_digit3_acc: 0.6171 - val_digit4_acc: 0.6471
+Epoch 00020: saving model to model/20-1.11-1.70.hdf5
+Epoch 21/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 0.8938 - digit1_loss: 0.1923 - digit2_loss: 0.2484 - digit3_loss: 0.2102 - digit4_loss: 0.2429 - digit1_acc: 0.9460 - digit2_acc: 0.9235 - digit3_acc: 0.9392 - digit4_acc: 0.9297 - val_loss: 0.6163 - val_digit1_loss: 0.1318 - val_digit2_loss: 0.1763 - val_digit3_loss: 0.1554 - val_digit4_loss: 0.1528 - val_digit1_acc: 0.9650 - val_digit2_acc: 0.9530 - val_digit3_acc: 0.9570 - val_digit4_acc: 0.9680
 
-Epoch 00022: saving model to model/22-1.91-4.90.hdf5
-Epoch 23/25
-2800/2800 [==============================] - 104s 37ms/step - loss: 1.5628 - digit1_loss: 0.2980 - digit2_loss: 0.4236 - digit3_loss: 0.3914 - digit4_loss: 0.4498 - digit1_acc: 0.9068 - digit2_acc: 0.8757 - digit3_acc: 0.8786 - digit4_acc: 0.8664 - val_loss: 4.1936 - val_digit1_loss: 0.8991 - val_digit2_loss: 1.1335 - val_digit3_loss: 1.0226 - val_digit4_loss: 1.1384 - val_digit1_acc: 0.7157 - val_digit2_acc: 0.6700 - val_digit3_acc: 0.6757 - val_digit4_acc: 0.6286
+Epoch 00021: saving model to model/21-0.89-0.62.hdf5
+Epoch 22/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 0.7123 - digit1_loss: 0.1675 - digit2_loss: 0.1975 - digit3_loss: 0.1650 - digit4_loss: 0.1823 - digit1_acc: 0.9540 - digit2_acc: 0.9445 - digit3_acc: 0.9557 - digit4_acc: 0.9495 - val_loss: 1.2015 - val_digit1_loss: 0.3690 - val_digit2_loss: 0.3247 - val_digit3_loss: 0.2916 - val_digit4_loss: 0.2162 - val_digit1_acc: 0.8760 - val_digit2_acc: 0.8960 - val_digit3_acc: 0.9070 - val_digit4_acc: 0.9370
 
-Epoch 00023: saving model to model/23-1.56-4.19.hdf5
-Epoch 24/25
-2800/2800 [==============================] - 132s 47ms/step - loss: 1.3073 - digit1_loss: 0.2558 - digit2_loss: 0.3592 - digit3_loss: 0.3036 - digit4_loss: 0.3887 - digit1_acc: 0.9246 - digit2_acc: 0.8961 - digit3_acc: 0.9086 - digit4_acc: 0.8818 - val_loss: 1.5201 - val_digit1_loss: 0.2781 - val_digit2_loss: 0.4222 - val_digit3_loss: 0.3905 - val_digit4_loss: 0.4294 - val_digit1_acc: 0.9271 - val_digit2_acc: 0.8886 - val_digit3_acc: 0.8871 - val_digit4_acc: 0.9000
+Epoch 00022: saving model to model/22-0.71-1.20.hdf5
+Epoch 23/30
+4000/4000 [==============================] - 113s 28ms/step - loss: 0.6192 - digit1_loss: 0.1450 - digit2_loss: 0.1707 - digit3_loss: 0.1424 - digit4_loss: 0.1611 - digit1_acc: 0.9570 - digit2_acc: 0.9500 - digit3_acc: 0.9612 - digit4_acc: 0.9562 - val_loss: 0.7501 - val_digit1_loss: 0.2225 - val_digit2_loss: 0.2332 - val_digit3_loss: 0.1621 - val_digit4_loss: 0.1323 - val_digit1_acc: 0.9240 - val_digit2_acc: 0.9210 - val_digit3_acc: 0.9510 - val_digit4_acc: 0.9680
 
-Epoch 00024: saving model to model/24-1.31-1.52.hdf5
-Epoch 25/25
-2800/2800 [==============================] - 116s 41ms/step - loss: 1.1049 - digit1_loss: 0.2146 - digit2_loss: 0.3073 - digit3_loss: 0.2574 - digit4_loss: 0.3256 - digit1_acc: 0.9321 - digit2_acc: 0.9043 - digit3_acc: 0.9243 - digit4_acc: 0.9075 - val_loss: 3.0071 - val_digit1_loss: 0.7142 - val_digit2_loss: 0.8354 - val_digit3_loss: 0.7461 - val_digit4_loss: 0.7114 - val_digit1_acc: 0.7600 - val_digit2_acc: 0.7443 - val_digit3_acc: 0.7543 - val_digit4_acc: 0.7786
+Epoch 00023: saving model to model/23-0.62-0.75.hdf5
+Epoch 24/30
+4000/4000 [==============================] - 117s 29ms/step - loss: 0.5221 - digit1_loss: 0.1337 - digit2_loss: 0.1410 - digit3_loss: 0.1055 - digit4_loss: 0.1419 - digit1_acc: 0.9632 - digit2_acc: 0.9585 - digit3_acc: 0.9720 - digit4_acc: 0.9668 - val_loss: 0.3654 - val_digit1_loss: 0.0922 - val_digit2_loss: 0.0996 - val_digit3_loss: 0.1112 - val_digit4_loss: 0.0624 - val_digit1_acc: 0.9730 - val_digit2_acc: 0.9770 - val_digit3_acc: 0.9670 - val_digit4_acc: 0.9850
 
-Epoch 00025: saving model to model/25-1.10-3.01.hdf5
+Epoch 00024: saving model to model/24-0.52-0.37.hdf5
+Epoch 25/30
+4000/4000 [==============================] - 114s 28ms/step - loss: 0.4145 - digit1_loss: 0.1008 - digit2_loss: 0.1110 - digit3_loss: 0.0954 - digit4_loss: 0.1074 - digit1_acc: 0.9717 - digit2_acc: 0.9640 - digit3_acc: 0.9743 - digit4_acc: 0.9755 - val_loss: 0.3294 - val_digit1_loss: 0.0892 - val_digit2_loss: 0.0964 - val_digit3_loss: 0.0870 - val_digit4_loss: 0.0567 - val_digit1_acc: 0.9720 - val_digit2_acc: 0.9720 - val_digit3_acc: 0.9770 - val_digit4_acc: 0.9870
+
+Epoch 00025: saving model to model/25-0.41-0.33.hdf5
+Epoch 26/30
+4000/4000 [==============================] - 116s 29ms/step - loss: 0.3468 - digit1_loss: 0.0857 - digit2_loss: 0.0908 - digit3_loss: 0.0757 - digit4_loss: 0.0946 - digit1_acc: 0.9750 - digit2_acc: 0.9723 - digit3_acc: 0.9798 - digit4_acc: 0.9763 - val_loss: 0.3806 - val_digit1_loss: 0.1024 - val_digit2_loss: 0.1018 - val_digit3_loss: 0.1081 - val_digit4_loss: 0.0682 - val_digit1_acc: 0.9660 - val_digit2_acc: 0.9760 - val_digit3_acc: 0.9700 - val_digit4_acc: 0.9840
+
+Epoch 00026: saving model to model/26-0.35-0.38.hdf5
+Epoch 27/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 0.3223 - digit1_loss: 0.0731 - digit2_loss: 0.0810 - digit3_loss: 0.0756 - digit4_loss: 0.0927 - digit1_acc: 0.9790 - digit2_acc: 0.9745 - digit3_acc: 0.9788 - digit4_acc: 0.9790 - val_loss: 0.3812 - val_digit1_loss: 0.0831 - val_digit2_loss: 0.1155 - val_digit3_loss: 0.0933 - val_digit4_loss: 0.0892 - val_digit1_acc: 0.9770 - val_digit2_acc: 0.9660 - val_digit3_acc: 0.9690 - val_digit4_acc: 0.9680
+
+Epoch 00027: saving model to model/27-0.32-0.38.hdf5
+Epoch 28/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 0.2652 - digit1_loss: 0.0594 - digit2_loss: 0.0678 - digit3_loss: 0.0653 - digit4_loss: 0.0727 - digit1_acc: 0.9808 - digit2_acc: 0.9803 - digit3_acc: 0.9823 - digit4_acc: 0.9818 - val_loss: 0.2595 - val_digit1_loss: 0.0624 - val_digit2_loss: 0.0946 - val_digit3_loss: 0.0656 - val_digit4_loss: 0.0368 - val_digit1_acc: 0.9820 - val_digit2_acc: 0.9740 - val_digit3_acc: 0.9830 - val_digit4_acc: 0.9920
+
+Epoch 00028: saving model to model/28-0.27-0.26.hdf5
+Epoch 29/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 0.2314 - digit1_loss: 0.0593 - digit2_loss: 0.0581 - digit3_loss: 0.0512 - digit4_loss: 0.0629 - digit1_acc: 0.9845 - digit2_acc: 0.9800 - digit3_acc: 0.9858 - digit4_acc: 0.9838 - val_loss: 0.4200 - val_digit1_loss: 0.1045 - val_digit2_loss: 0.1370 - val_digit3_loss: 0.1012 - val_digit4_loss: 0.0773 - val_digit1_acc: 0.9640 - val_digit2_acc: 0.9590 - val_digit3_acc: 0.9660 - val_digit4_acc: 0.9750
+
+Epoch 00029: saving model to model/29-0.23-0.42.hdf5
+Epoch 30/30
+4000/4000 [==============================] - 114s 29ms/step - loss: 0.2129 - digit1_loss: 0.0534 - digit2_loss: 0.0542 - digit3_loss: 0.0497 - digit4_loss: 0.0556 - digit1_acc: 0.9840 - digit2_acc: 0.9818 - digit3_acc: 0.9843 - digit4_acc: 0.9873 - val_loss: 0.2538 - val_digit1_loss: 0.0476 - val_digit2_loss: 0.0837 - val_digit3_loss: 0.0828 - val_digit4_loss: 0.0397 - val_digit1_acc: 0.9850 - val_digit2_acc: 0.9750 - val_digit3_acc: 0.9770 - val_digit4_acc: 0.9910
+
+Epoch 00030: saving model to model/30-0.21-0.25.hdf5
 ```
 
 #### 訓練 log
