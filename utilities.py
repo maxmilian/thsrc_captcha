@@ -71,3 +71,44 @@ def show_train_history(train_history, train, validation):
     plt.legend(['train', 'validation'], loc='upper left')
     plt.show()
 
+
+# In[ ]:
+
+
+from keras.models import Model
+from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
+from keras.layers.normalization import BatchNormalization
+
+def create_cnn_model(width, height, allowedChars, num_digit):
+    print('Creating CNN model...')
+    tensor_in = Input((height, width, 3))
+
+    tensor_out = tensor_in
+    tensor_out = Conv2D(filters=32, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = Conv2D(filters=32, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = MaxPooling2D(pool_size=(2, 2))(tensor_out)
+    tensor_out = Conv2D(filters=64, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = Conv2D(filters=64, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = MaxPooling2D(pool_size=(2, 2))(tensor_out)
+    tensor_out = Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = BatchNormalization(axis=1)(tensor_out)
+    tensor_out = MaxPooling2D(pool_size=(2, 2))(tensor_out)
+    tensor_out = Conv2D(filters=256, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = Conv2D(filters=256, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = MaxPooling2D(pool_size=(2, 2))(tensor_out)
+    tensor_out = Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation='relu')(tensor_out)
+    tensor_out = BatchNormalization(axis=1)(tensor_out)
+    tensor_out = MaxPooling2D(pool_size=(2, 2))(tensor_out)
+
+    tensor_out = Flatten()(tensor_out)
+    tensor_out = Dropout(0.5)(tensor_out)
+
+    tensor_out = [Dense(len(allowedChars), name='digit' + str(i), activation='softmax')(tensor_out) for i in range(1, num_digit + 1)]
+    
+    model = Model(inputs=tensor_in, outputs=tensor_out)
+    model.compile(loss='categorical_crossentropy', optimizer='Adamax', metrics=['accuracy'])
+    print(model.summary())
+    
+    return model
+

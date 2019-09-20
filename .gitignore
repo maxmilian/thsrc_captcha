@@ -111,3 +111,4 @@ logs/events*
 thsrc.png
 captcha.jpg
 preprocessing.jpg
+auto-train.csv
