@@ -31,26 +31,27 @@ def one_hot_decoding(prediction, allowedChars):
     return text
 
 
-# In[ ]:
+# In[1]:
 
 
 def read_train_data(filename, size):
     train_data = []
     if os.path.isdir(filename):
-        train_data = np.stack([np.array(cv2.imread(filename + str(index) + ".jpg"))/255.0 for index in range(1, size + 1)])
+        train_data = np.stack([np.array(cv2.imread(filename + str(index) + ".jpg"))/127.5 - 1 for index in range(1, size + 1)])
     return train_data
 
 
 # In[ ]:
 
 
-def read_label_data(filename, allowedChars, num_dic):
+def read_label_data(filename, allowedChars, num_dic, size):
     train_label = []
     traincsv = open(filename, 'r', encoding = 'utf8')
     
     read_label =  [one_hot_encoding(row[0], allowedChars) for row in csv.reader(traincsv)]
+    read_label =  read_label[:size]
     train_label = [[] for _ in range(num_dic)]
-    
+
     for arr in read_label:
         for index in range(num_dic):
             train_label[index].append(arr[index])
@@ -79,8 +80,7 @@ from keras.models import Model
 from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from keras.layers.normalization import BatchNormalization
 
-def create_cnn_model(width, height, allowedChars, num_digit):
-    print('Creating CNN model...')
+def build_vgg_model(width, height, allowedChars, num_digit):
     tensor_in = Input((height, width, 3))
 
     tensor_out = tensor_in
@@ -108,7 +108,49 @@ def create_cnn_model(width, height, allowedChars, num_digit):
     
     model = Model(inputs=tensor_in, outputs=tensor_out)
     model.compile(loss='categorical_crossentropy', optimizer='Adamax', metrics=['accuracy'])
-    print(model.summary())
+    model.summary()
     
     return model
+
+
+# In[ ]:
+
+
+from keras.applications import ResNet50
+
+def build_resnet50_model(size, allowedChars, num_digit):
+    model = ResNet50(weights='imagenet', include_top=False, input_shape=(size, size, 3))
+
+    tensor_in = model.input
+    
+    tensor_out = model.output
+    tensor_out = Flatten()(tensor_out)
+    tensor_out = Dropout(0.5)(tensor_out)
+    outputs = [Dense(len(allowedChars), name='digit' + str(i), activation='softmax')(tensor_out) for i in range(1, num_digit + 1)]
+
+    model2 = Model(tensor_in, outputs)
+    model2.compile(loss='categorical_crossentropy', optimizer='Adamax', metrics=['accuracy'])
+    model2.summary()
+    return model2
+
+
+# In[ ]:
+
+
+from keras.applications import InceptionV3
+
+def build_inceptionv3_model(size, allowedChars, num_digit):
+    model = InceptionV3(weights='imagenet', include_top=False, input_shape=(size, size, 3))
+
+    tensor_in = model.input
+    
+    tensor_out = model.output
+    tensor_out = Flatten()(tensor_out)
+    tensor_out = Dropout(0.5)(tensor_out)
+    outputs = [Dense(len(allowedChars), name='digit' + str(i), activation='softmax')(tensor_out) for i in range(1, num_digit + 1)]
+
+    model2 = Model(tensor_in, outputs)
+    model2.compile(loss='categorical_crossentropy', optimizer='Adamax', metrics=['accuracy'])
+    model2.summary()
+    return model2
 
