@@ -78,7 +78,7 @@ def show_train_history(train_history, train, validation):
 
 from keras.models import Model
 from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
-from keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers import BatchNormalization
 
 def build_vgg_model(width, height, allowedChars, num_digit):
     tensor_in = Input((height, width, 3))

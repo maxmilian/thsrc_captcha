@@ -2,9 +2,10 @@ Pillow >= 9.2.0
 matplotlib >= 3.5.3
 selenium >= 4.4.3
 webdriver-manager >= 3.8.3
-opencv-python >= 4.6.0
+opencv-python-headless >= 4.6.0
 tensorflow >= 2.10.0
 keras >= 2.10.0
 numpy >= 1.23.3
 h5py >= 3.7.0
 scikit-learn >= 1.1.2
+jupyterlab
