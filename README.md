@@ -16,7 +16,7 @@
 
 ### Dependencies
 
-*****2020-10-31 更新，使用 python 3.7 更新部分套件*****
+*****2022-09-13 更新，使用 python 3.9 更新部分套件*****
 請先安裝相關的 python 套件
 
 ```sh
@@ -36,6 +36,8 @@ pip3 install -r requirements.txt
 爬蟲請參考 `crawler.ipynb` 和編譯出來的 `crawler.py`。此程式使用 Selenium Chrome driver 去抓取高鐵螢幕截圖，再切割出驗證碼圖片存入至 captcha 目錄下。
 
 需要注意的是，因為我使用 Macbook Pro 的 Retina 螢幕，使用螢幕截圖時，解析度會自動變為2倍，所以中間有一段程式在處理這個 ratio，不過最後都存成 140 x 48 的圖片。
+
+>> 需下載 [ChromeDriver](https://chromedriver.chromium.org/downloads)，安裝放置執行檔於 /usr/local/bin/chromedriver
 
 檔案列表：
 
